@@ -4,12 +4,21 @@ def create_board()->list:
     """
     return ["_"]*9
     
-def print_board(board:list):
+def print_board(board: list):
     """
     Prints the board
     """
-    for x in range(0,9,3):
-        print(f"{board[x]} {board[x+1]} {board[x+2]}" + "\n")
+    print("Current board:")
+    for i in range(0, 9, 3):
+        print(f" {board[i]} | {board[i+1]} | {board[i+2]} ")
+        if i < 6:
+            print("---+---+---")
+    print("\nReference positions:")
+    for i in range(0, 9, 3):
+        print(f" {i+1} | {i+2} | {i+3} ")
+        if i < 6:
+            print("---+---+---")
+    print()
             
 
 def player_choice() -> bool:
@@ -90,10 +99,10 @@ def play_again()->bool:
     """
     If the user wants to play again it recursively calls play(), otherwise it returns False
     """
-    yes_no = input("Do you want to play again? Y/N")
+    yes_no = input("Do you want to play again? Y/N ")
     while yes_no.lower() not in ["y","n"]:
-        print("Wrong character! Please enter Y or N")
-        yes_no = input("Do you want to play again? Y/N")
+        print("Wrong character! Please enter Y or N ")
+        yes_no = input("Do you want to play again? Y/N ")
     return yes_no.lower() == "y"
 
 def play():
