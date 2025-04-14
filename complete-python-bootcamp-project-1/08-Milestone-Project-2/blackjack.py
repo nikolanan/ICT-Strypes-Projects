@@ -65,7 +65,7 @@ class Hand:
         self.__value = 0   
         self.__aces = 0 
     
-    def add_card(self,card):
+    def add_card(self, card:Card):
         self.__cards.append(card)
         self.__value += values[card.get_rank()]
         if card.get_rank() == 'Ace':
@@ -74,7 +74,7 @@ class Hand:
     def adjust_for_ace(self):
         while self.__value > 21 and self.__aces:
             self.__value -= 10
-            self.__aces -= 1 
+            self.__aces -= 1
     def get_value(self) ->int:
         return self.__value
     def get_cards(self) ->list:
@@ -150,7 +150,7 @@ class Game():
     def start_game(self):
         """
         Main game loop. Deals cards, handles player decisions (hit or stand), determines the winner, updates balance, and prompts to continue
-        """
+        """ 
         while True:
 
             self.place_bet()
