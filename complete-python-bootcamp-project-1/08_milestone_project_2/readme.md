@@ -23,7 +23,7 @@ No requirements are needed to run this script. It uses only built-in Python libr
 
 ## How to run the game
 Run the following command in your terminal in the same directory as this file (08_milestone_project_2):
- <pre>```python blackjack.py```</pre>
+ <pre>python blackjack.py</pre>
 
 ## How to run the tests
 run the tests in your terminal in the same directory as this file (08_milestone_project_2) with:
