@@ -1,12 +1,14 @@
-**Project:** Tic Tac Toe Game - Player vs Player
+# Project: Tic Tac Toe Game - Player vs Player#
 
-**How to start the game:** before runnning <pre>```text python tic_tac_toe.py```</pre> in your terminal in the same directory as this file
+**How to start the game:** before runnning <pre>```python tic_tac_toe.py```</pre> in your terminal in the same directory as this file
 (04_milestone_project_1).
-Then install the required libraries using ```pip install -r requirements.txt```.
+Then install the required libraries using <pre>```pip install -r requirements.txt```</pre>.
 
-**How to run tests:** run ```pytest --cov=tic_tac_toe``` in your terminal in the same directory as this file (04_milestone_project_1).
+**How to run tests:** run <pre>```pytest --cov=tic_tac_toe```</pre> in your terminal in the same directory as this file (04_milestone_project_1).
 
 **How to play:** The game will prompt you to choose your mark (X or O). Then, players take turns entering their moves by specifying the position on the grid (1-9). The game will display the current board after each move. If a player tries to place their mark in an already occupied square, they will be prompted to try again. The game continues until one player wins or the game ends in a draw.
+
+**How the code works:** You can find comprehensive documentaion in the code itself. 
 
 **Output of the tests:**
 <pre makrdown>
