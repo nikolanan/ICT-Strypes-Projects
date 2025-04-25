@@ -1,0 +1,137 @@
+**Project:** Tic Tac Toe Game - Player vs Player
+
+**How to play:** before runnning ```python tic_tac_toe.py``` in your terminal in the same directory as this file
+(04_milestone_project_1).
+Then install the required libraries using ```pip install -r requirements.txt```.
+
+**How to run tests:** run ```pytest --cov=tic_tac_toe``` in your terminal in the same directory as this file (04_milestone_project_1).
+
+**Output of the tests:**
+Name             Stmts   Miss  Cover
+------------------------------------
+tic_tac_toe.py      94      6    94%
+------------------------------------
+TOTAL               94      6    94%
+
+Sample gameplay:
+```python
+
+What do you want to choose? X or O. Type either X or O to choose: x
+X's turn.
+Enter your move from 1-9: 1
+Current board:
+ X | _ | _
+---+---+---
+ _ | _ | _
+---+---+---
+ _ | _ | _
+
+Reference positions:
+ 1 | 2 | 3
+---+---+---
+ 4 | 5 | 6
+---+---+---
+ 7 | 8 | 9
+
+O's turn.
+Enter your move from 1-9: 2
+Current board:
+ X | O | _
+---+---+---
+ _ | _ | _
+---+---+---
+ _ | _ | _
+
+Reference positions:
+ 1 | 2 | 3
+---+---+---
+ 4 | 5 | 6
+---+---+---
+ 7 | 8 | 9
+
+X's turn.
+Enter your move from 1-9: 5
+Current board:
+ X | O | _
+---+---+---
+ _ | X | _
+---+---+---
+ _ | _ | _
+
+Reference positions:
+ 1 | 2 | 3
+---+---+---
+ 4 | 5 | 6
+---+---+---
+ 7 | 8 | 9
+
+O's turn.
+Enter your move from 1-9: 9
+Current board:
+ X | O | _
+---+---+---
+ _ | X | _
+---+---+---
+ _ | _ | O
+
+Reference positions:
+ 1 | 2 | 3
+---+---+---
+ 4 | 5 | 6
+---+---+---
+ 7 | 8 | 9
+
+X's turn.
+Enter your move from 1-9: 9
+That position has already been chosen!Try again! 
+Enter your move from 1-9: 7
+Current board:
+ X | O | _
+---+---+---
+ _ | X | _
+---+---+---
+ X | _ | O
+
+Reference positions:
+ 1 | 2 | 3
+---+---+---
+ 4 | 5 | 6
+---+---+---
+ 7 | 8 | 9
+
+O's turn.
+Enter your move from 1-9: 3
+Current board:
+ X | O | O
+---+---+---
+ _ | X | _
+---+---+---
+ X | _ | O
+
+Reference positions:
+ 1 | 2 | 3
+---+---+---
+ 4 | 5 | 6
+---+---+---
+ 7 | 8 | 9
+
+X's turn.
+Enter your move from 1-9: 4
+Current board:
+ X | O | O
+---+---+---
+ X | X | _
+---+---+---
+ X | _ | O
+
+Reference positions:
+ 1 | 2 | 3
+---+---+---
+ 4 | 5 | 6
+---+---+---
+ 7 | 8 | 9
+
+X won!
+Do you want to play again? Y/N n
+Thanks for playing!
+```
