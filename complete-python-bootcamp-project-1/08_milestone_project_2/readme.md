@@ -19,15 +19,15 @@ This is a simple command-line Blackjack game implemented in Python. The game all
 
 ## Requirements
 No requirements are needed to run this script. It uses only built-in Python libraries, but for the tests, you need to install the following library:
-<pre>```pip install -r requirements.txt```</pre>
+ <pre>```pip install -r requirements.txt```</pre>
 
 ## How to run the game
 Run the following command in your terminal in the same directory as this file (08_milestone_project_2):
-<pre>```python tic_tac_toe.py```</pre>
+ <pre>```python blackjack.py```</pre>
 
 ## How to run the tests
 run the tests in your terminal in the same directory as this file (08_milestone_project_2) with:
-<pre>```pytest --cov=blackjack --cov-report=term```</pre>
+ <pre>```pytest --cov=blackjack --cov-report=term```</pre>
 
 ## Find comprehensive documentation in the code itself
 The code is well-commented and includes docstrings for all functions and classes, explaining their purpose and usage.
@@ -41,7 +41,7 @@ blackjack.py     153      7    95%
 TOTAL            153      7    95%
 </pre>
 
-## Sample Output
+## Sample Gameplay
 ```text
 Your current amount is 100
 Please enter your bet: 100
