@@ -1,8 +1,8 @@
-# Project: Tic Tac Toe Game - Player vs Player#
+# Project: Tic Tac Toe Game - Player vs Player
 
 **How to start the game:** before runnning <pre>```python tic_tac_toe.py```</pre> in your terminal in the same directory as this file
-(04_milestone_project_1).
-Then install the required libraries using <pre>```pip install -r requirements.txt```</pre>.
+(04_milestone_project_1)
+install the required libraries using <pre>```pip install -r requirements.txt```</pre>
 
 **How to run tests:** run <pre>```pytest --cov=tic_tac_toe```</pre> in your terminal in the same directory as this file (04_milestone_project_1).
 
