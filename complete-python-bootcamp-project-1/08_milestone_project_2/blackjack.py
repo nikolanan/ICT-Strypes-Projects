@@ -68,6 +68,13 @@ class Deck():
         :rtype: int
         """
         return len(self.__deck_of_cards)
+    def __str__(self) -> str:
+        """
+        Returns a string representation of the deck, showing all cards in it.
+        :return: string representation of the deck
+        :rtype: str
+        """
+        return "\n".join(str(card) for card in self.__deck_of_cards)
 
 class Balance():
     """
@@ -164,14 +171,16 @@ class Game():
         """
         Prompts the player to place a bet and checks if the bet is valid.
         """
-        try:
-            print(f"Your current amount is {self.__balance.get_balance()}")
-            self.__bet = float(input("Please enter your bet: "))
-            while(self.__balance.widraw(self.__bet) is False):
-                self.__bet = float(input("Your bet cannot be more that your amount." \
-                                        " Enter new amount:"))
-        except ValueError:
-            print("You have entered invalid data.Try again: ")
+        while True:
+            try:
+                print(f"Your current amount is {self.__balance.get_balance()}")
+                self.__bet = float(input("Please enter your bet: "))
+                while(self.__balance.widraw(self.__bet) is False):
+                    self.__bet = float(input("Your bet cannot be more that your amount." \
+                                            " Enter new amount:"))
+                break
+            except ValueError:
+                print("You have entered invalid data.Try again: ")
 
     def win(self):
         """
