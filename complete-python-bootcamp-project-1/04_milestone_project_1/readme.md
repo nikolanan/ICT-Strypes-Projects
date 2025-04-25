@@ -7,13 +7,15 @@ Then install the required libraries using ```pip install -r requirements.txt```.
 **How to run tests:** run ```pytest --cov=tic_tac_toe``` in your terminal in the same directory as this file (04_milestone_project_1).
 
 **Output of the tests:**
+<pre makrdown>
 Name             Stmts   Miss  Cover
 ------------------------------------
 tic_tac_toe.py      94      6    94%
 ------------------------------------
 TOTAL               94      6    94%
+</pre>
 
-Sample gameplay:
+**Sample gameplay:**
 ```python
 
 What do you want to choose? X or O. Type either X or O to choose: x
