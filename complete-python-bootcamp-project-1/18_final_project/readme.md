@@ -1,3 +1,52 @@
+# Budget Tracker
+
+## Overview
+
+This is a simple budget management system that allows users to manage their income and expenses
+using a command-line interface. Users can create budgets, add income and expenses, view totals for specific periods, and remove entries.
+
+## Features
+
+- Create new budgets or use existing ones
+- Add income and expenses with categories
+- View total income and expenses for specific periods
+- View net budget for specific periods
+- Remove income and expenses
+
+## Requirements
+
+- Python 3.x, nothing else in needed
+
+## How to Run
+run
+```text
+    python main.py
+```
+in the terminal (in the directory of the project). The program will prompt you to choose between creating a new budget or using an existing one. Follow the on-screen instructions to manage your budget.
+
+## Project Structure
+
+**main.py** # Main script to run the budget tracker
+budget_class.py
+
+**budget_class.py** # Contains the Budget class and its methods
+
+**category_class.py** # Contains the Category class and its methods. It is used to manage the categories of income and expenses, basically the categories are food, water bill, electricity bill, salary, scholarship and anyrhing else could be added by the user.
+
+**occurrence_class.py** # Contains the Occurrence class. The occurrence class is used to manage the occurrence of income and expenses (one-time, daily, weekly, monthly).
+
+**transaction_class.py** # Contains the Transaction class. The transaction class is used to manage the transactions (income and expenses). It is an abstract class and is inherited by the Income and Expense classes locatated in the same file.
+
+**utils.py** # Contains utility functions for that are used in main.py.
+
+**budget.txt** # It is a SQlite database file that is used to store the inforamation. To see the database, you can use any SQLite viewer. Suggested: [DB Browser for SQLite](https://sqlitebrowser.org/).
+
+## Code Documentation and Data Structure
+The code is well documented with docstrings and comments. Functions and classes are named appropriately to reflect their purpose. The code is organized into separate files for better readability and maintainability. Refer to the project structure for breif description of each file.
+
+![structure of database](images/database_structure.png)
+
+## Sample Usage of the Budget Tracker
 
 ```text
 Would you like to choose new or existing budget? Choose n or e: e
