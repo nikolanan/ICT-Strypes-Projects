@@ -25,6 +25,22 @@ class Category():
             "SELECT * from categories"
         )
         return self.cursor.fetchall()
+
+    def show_categories_by_id(self,cat_id: int) -> str:
+        """The function retrieves a category name by its primary key.
+
+        :param cat_id: The primary key of the category to be retrieved.
+        :type cat_id: int
+        :return: The name of the category.
+        :rtype: str
+        """        
+        self.cursor.execute(
+            """Select category_name from Categories
+                Where category_pk = ?
+            """,
+            (cat_id,)
+        )
+        return self.cursor.fetchall()[0][0]
     def close(self):
         """The function closes the database connection."""
         self.conn.close()

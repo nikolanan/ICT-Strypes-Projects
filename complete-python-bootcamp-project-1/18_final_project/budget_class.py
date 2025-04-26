@@ -16,7 +16,7 @@ class Budget:
 
         :return: A list of tuples containing budget primary keys and names.
         :rtype: list[tuple]
-        """        
+        """   
         self.cursor.execute(
             "SELECT budget_pk,budget_name from Budget"
         )
