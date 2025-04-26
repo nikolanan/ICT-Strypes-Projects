@@ -41,7 +41,7 @@ budget_class.py
 
 **budget.txt** # It is a SQlite database file that is used to store the inforamation. To see the database, you can use any SQLite viewer. Suggested: [DB Browser for SQLite](https://sqlitebrowser.org/).
 
-## Code Documentation and Data Structure
+## Code Documentation and Database Structure
 The code is well documented with docstrings and comments. Functions and classes are named appropriately to reflect their purpose. The code is organized into separate files for better readability and maintainability. Refer to the project structure for breif description of each file.
 
 ![structure of database](https://github.com/nikolanan/ICT-Strypes-Projects/blob/main/complete-python-bootcamp-project-1/18_final_project/images/database_structure.PNG)
