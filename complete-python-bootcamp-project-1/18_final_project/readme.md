@@ -44,7 +44,7 @@ budget_class.py
 ## Code Documentation and Data Structure
 The code is well documented with docstrings and comments. Functions and classes are named appropriately to reflect their purpose. The code is organized into separate files for better readability and maintainability. Refer to the project structure for breif description of each file.
 
-![structure of database](images/database_structure.png)
+![structure of database](https://github.com/nikolanan/ICT-Strypes-Projects/blob/main/complete-python-bootcamp-project-1/18_final_project/images/database_structure.PNG)
 
 ## Sample Usage of the Budget Tracker
 
