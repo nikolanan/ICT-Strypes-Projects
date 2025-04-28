@@ -1,0 +1,86 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Planner</title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>Travel Itineraries</h1>
+
+        <div class="buttons">
+            <a href="{% url 'create_itinerary' %}" class="btn">Create New Itinerary</a>
+            <a href="{% url 'create_airline' %}" class="btn">Add Airline</a>
+            <a href="{% url 'create_hotel' %}" class="btn">Add Hotel</a>
+            <a href="{% url 'create_point_of_interest' %}" class="btn">Add Point of Interest</a>
+        </div>
+
+        <ul class="itinerary-list">
+            {% for itinerary in itineraries %}
+                <li class="itinerary-item">
+                    <h2>{{ itinerary.title }}</h2>
+                    <p><strong>Description:</strong> {{ itinerary.description }}</p>
+                    <p><strong>Start Date:</strong> {{ itinerary.start_date }}</p>
+                    <p><strong>End Date:</strong> {{ itinerary.end_date }}</p>
+                    <p><strong>Budget:</strong> ${{ itinerary.budget }}</p>
+
+                    {% if itinerary.airlines.exists %}
+                    <h3>Airlines:</h3>
+                    <ul>
+                        {% for airline in itinerary.airlines.all %}
+                            <li>
+                                <strong>Name:</strong> {{ airline.name }}<br>
+                                <strong>Flight number:</strong> {{ airline.flight_number }}<br>
+                                <strong>Departure:</strong> {{ airline.departure }}<br>
+                                <strong>Arrival:</strong> {{ airline.arrival }}<br>
+                                <strong>Departure Date:</strong> {{ airline.departure_time }}<br>
+                                <strong>Arrival Date:</strong> {{ airline.arrival_time }}<br>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+
+
+                {% if itinerary.hotels.exists %}
+                <h3>Hotels:</h3>
+                <ul>
+                    {% for hotel in itinerary.hotels.all %}
+                        <li>
+                            <strong>Name:</strong> {{ hotel.name }}<br>
+                            <strong>Check in:</strong> {{ hotel.check_in }}<br>
+                            <strong>Check out:</strong> {{ hotel.check_out }}<br>
+                            <strong>Address:</strong> {{ hotel.address }}<br>
+                            <strong>Cost per nigth:</strong> {{ hotel.cost_per_night }}<br>
+                            {% if hotel.email %}
+                                <strong>Email:</strong> {{ hotel.email }}<br>
+                            {% endif %}
+                            {% if hotel.website %}
+                                <strong>Website:</strong> <a href="{{ hotel.website }}" target="_blank">{{ hotel.website }}</a><br>
+                            {% endif %}
+                        </li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+            
+
+                    {% if itinerary.points_of_interest.exists %}
+                        <h3>Points of Interest:</h3>
+                        <ul>
+                            {% for poi in itinerary.points_of_interest.all %}
+                                <li>
+                                    {{ poi.name }} - {{ poi.location }} - {{ poi.description }}
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    {% endif %}
+                </li>
+            {% empty %}
+                <li>No itineraries available.</li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>

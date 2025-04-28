@@ -8,3 +8,5 @@ venv
 04_milestone_project_1/__*
 04_milestone_project_1/.pytest*
 18_final_project/__*
+18_final_project_4/travel_planner/planner/__pycache__/
+18_final_project_4/travel_planner/travel_planner/__pycache__/
