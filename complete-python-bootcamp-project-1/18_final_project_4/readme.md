@@ -10,7 +10,7 @@ Itineraries: Each includes a title, description, start and end dates, and a budg
 
 Airlines: Users can add flight details such as airline name, flight number, departure/arrival times and locations.
 
-Hotels: Users can register hotels with check-in/check-out dates, cost per night, and optional contact details like email and website.
+Hotels: Users can register hotels with check-in/check-out dates, cost per night.
 
 Points of Interest: Places worth visiting during the trip can be added with location and description.
 
@@ -61,5 +61,5 @@ This is the interface for adding a new itinerary. You choose form existing airli
 
 ![Travel Planner Screenshot 2](../18_final_project_4/images/4.PNG)
 
-This is the interface for adding a new airline (it is default from forms.py).
+This is the interface for adding a new airline (it is default from forms.py). The other interfaces are identical as only the fields are different.
 ![Travel Planner Screenshot 2](../18_final_project_4/images/2.PNG)
