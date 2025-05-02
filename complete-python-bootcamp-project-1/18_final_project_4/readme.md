@@ -31,7 +31,7 @@ Then run the server:
 ```text
     python manage.py runserver
 ```
-**Note:** Since  the administator view is configured you can create a superuser and use the admin view to add data to the database.
+**Note:** Since  the administator view is configured you can create a superuser and use the admin manage the data in the database.
 
 ```text
     python manage.py createsuperuser
