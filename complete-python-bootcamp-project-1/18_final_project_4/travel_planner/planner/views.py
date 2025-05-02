@@ -3,12 +3,15 @@ from .forms import ItineraryForm, AirlineForm, HotelForm, PointOfInterestForm
 from .models import Itinerary
 
 
-# def home(request):
-#     # Query all itineraries to display them on the home page
-#     itineraries = Itinerary.objects.all()
-#     return render(request, 'home.html', {'itineraries': itineraries})
-
 def home(request):
+    """Home view for the travel planner application.
+    This view is responsible for displaying all itineraries and their details.
+
+    :param request: The HTTP request object.
+    :type request: HttpRequest
+    :return: A rendered HTML response containing the home page with itineraries.
+    :rtype: HttpResponse
+    """    
     # Query all itineraries to display them on the home page
     itineraries = Itinerary.objects.all()
     
@@ -31,6 +34,14 @@ def home(request):
 
 
 def create_itinerary(request):
+    """Create a new itinerary.
+    This view handles the creation of a new itinerary using a form.
+
+    :param request: The HTTP request object.
+    :type request:  HttpRequest
+    :return: A rendered HTML response containing the itinerary creation form.
+    :rtype: HttpResponse
+    """    
     if request.method == 'POST':
         form = ItineraryForm(request.POST)
         if form.is_valid():
@@ -41,6 +52,12 @@ def create_itinerary(request):
     return render(request, 'create_itinerary.html', {'form': form})
 
 def create_airline(request):
+    """ Create a new airline.
+    :param request: The HTTP request object.
+    :type request: HttpRequest
+    :return: A rendered HTML response containing the airline creation form.
+    :rtype: HttpResponse
+    """    
     if request.method == 'POST':
         form = AirlineForm(request.POST)
         if form.is_valid():
@@ -51,6 +68,13 @@ def create_airline(request):
     return render(request, 'create_airline.html', {'form': form})
 
 def create_hotel(request):
+    """ Create a new hotel.
+
+    :param request: The HTTP request object.
+    :type request: HttpRequest
+    :return: A rendered HTML response containing the hotel creation form.
+    :rtype: HttpResponse
+    """
     if request.method == 'POST':
         form = HotelForm(request.POST)
         if form.is_valid():
@@ -61,6 +85,13 @@ def create_hotel(request):
     return render(request, 'create_hotel.html', {'form': form})
 
 def create_point_of_interest(request):
+    """ Create a new point of interest.
+
+    :param request: The HTTP request object.
+    :type request:  HttpRequest
+    :return: A rendered HTML response containing the point of interest creation form.
+    :rtype: HttpResponse
+    """    
     if request.method == 'POST':
         form = PointOfInterestForm(request.POST)
         if form.is_valid():

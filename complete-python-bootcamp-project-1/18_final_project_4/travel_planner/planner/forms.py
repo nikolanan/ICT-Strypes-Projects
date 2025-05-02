@@ -2,14 +2,23 @@ from django import forms
 from .models import Itinerary, Airline, Hotel, PointOfInterest
 
 class ItineraryForm(forms.ModelForm):
+    """ Form for creating itineraries.
+
+    :param forms: Django forms module.
+    :type forms: django.forms
+    """ 
     class Meta:
+        """ 
+        Meta class for ItineraryForm.
+        This class defines the model and fields to be used in the form.
+        """  
         model = Itinerary
         fields = '__all__'
         widgets = {
             'start_date': forms.DateInput(attrs={'type': 'date'}),
             'end_date': forms.DateInput(attrs={'type': 'date'}),
         }
-        
+
     hotels = forms.ModelMultipleChoiceField(
         queryset = Hotel.objects.all(),
         required = False,
@@ -29,7 +38,16 @@ class ItineraryForm(forms.ModelForm):
     )
 
 class AirlineForm(forms.ModelForm):
+    """Form for creating airlines.
+
+    :param forms: Django forms module.
+    :type forms: django.forms
+    """    
     class Meta:
+        """ 
+        Meta class for AirlineForm.
+        This class defines the model and fields to be used in the form.
+        """ 
         model = Airline
         fields = '__all__'
         widgets = {
@@ -38,7 +56,16 @@ class AirlineForm(forms.ModelForm):
         }
 
 class HotelForm(forms.ModelForm):
+    """Form for creating hotels.
+
+    :param forms: Django forms module.
+    :type forms: django.forms
+    """    
     class Meta:
+        """
+        Class for HotelForm.
+        This class defines the model and fields to be used in the form.
+        """        
         model = Hotel
         fields = '__all__'
         widgets = {
@@ -47,6 +74,15 @@ class HotelForm(forms.ModelForm):
         }
 
 class PointOfInterestForm(forms.ModelForm):
+    """Form for creating points of interest.
+
+    :param forms: Django forms module.
+    :type forms: django.forms
+    """    
     class Meta:
+        """
+        Class for PointOfInterestForm.
+        This class defines the model and fields to be used in the form.
+        """       
         model = PointOfInterest
         fields = ['name', 'description', 'location']
