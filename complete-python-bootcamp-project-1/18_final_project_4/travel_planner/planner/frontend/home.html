@@ -25,6 +25,7 @@
                     <p><strong>Description:</strong> {{ itinerary.description }}</p>
                     <p><strong>Start Date:</strong> {{ itinerary.start_date }}</p>
                     <p><strong>End Date:</strong> {{ itinerary.end_date }}</p>
+                    <p><strong>Trip Duration:</strong> {{ itinerary.num_days }} days</p>
                     <p><strong>Budget:</strong> ${{ itinerary.budget }}</p>
 
                     {% if itinerary.airlines.exists %}
@@ -54,15 +55,10 @@
                             <strong>Check out:</strong> {{ hotel.check_out }}<br>
                             <strong>Address:</strong> {{ hotel.address }}<br>
                             <strong>Cost per nigth:</strong> {{ hotel.cost_per_night }}<br>
-                            {% if hotel.email %}
-                                <strong>Email:</strong> {{ hotel.email }}<br>
-                            {% endif %}
-                            {% if hotel.website %}
-                                <strong>Website:</strong> <a href="{{ hotel.website }}" target="_blank">{{ hotel.website }}</a><br>
-                            {% endif %}
                         </li>
                     {% endfor %}
                 </ul>
+                <p><strong>Total Hotel Cost for this Itinerary:</strong> ${{ itinerary.total_hotel_cost }}</p>
             {% endif %}
             
 
@@ -84,3 +80,4 @@
     </div>
 </body>
 </html>
+

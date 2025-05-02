@@ -12,7 +12,8 @@ class Airline(models.Model):
     arrival_time = models.DateTimeField()
 
     def __str__(self):
-        return f"{self.name} ({self.flight_number})\n Departs: {self.departure_time}\n Arrives: {self.arrival_time}"
+        return f"{self.name} ({self.flight_number})| Departs: {self.departure_time.strftime('%Y-%m-%d %H:%M:%S')}| Arrives: {self.arrival_time.strftime('%Y-%m-%d %H:%M:%S')}"
+
 
 class Hotel(models.Model):
     """
@@ -26,7 +27,7 @@ class Hotel(models.Model):
     cost_per_night = models.DecimalField(max_digits=10, decimal_places=2)
 
     def __str__(self):
-        return f"{self.name}\n Check in: {self.check_in}\n Checkout: {self.check_out}"
+        return f"{self.name}| Check in: {self.check_in}| Checkout: {self.check_out}"
 
 class PointOfInterest(models.Model):
     """
