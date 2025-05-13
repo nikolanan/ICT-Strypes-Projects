@@ -36,7 +36,7 @@ class Transaction:
         """
 
         self.cursor.execute(
-            f"""Select * from {self.table_name}"""
+            f"""SELECT * FROM {self.table_name}"""
         )
         return self.cursor.fetchall()
 
@@ -49,8 +49,9 @@ class Transaction:
         :rtype: list[tuple]
         """
         self.cursor.execute(
-            f"""Select * from {self.table_name}
-                Where {self.table_name.lower()}_pk = ?
+            f"""
+            SELECT * FROM {self.table_name}
+            WHERE {self.table_name.lower()}_pk = ?
             """,
             (revenue_id,)
         )
@@ -124,7 +125,8 @@ class Transaction:
         :type revenue_id: int
         """
         self.cursor.execute(
-            f"""Delete from {self.table_name}
+            f"""
+            DELETE FROM {self.table_name}
             WHERE {self.table_name.lower()}_pk = ?
             """,
             (revenue_id,)

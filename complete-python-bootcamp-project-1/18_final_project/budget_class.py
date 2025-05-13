@@ -18,7 +18,7 @@ class Budget:
         :rtype: list[tuple]
         """   
         self.cursor.execute(
-            "SELECT budget_pk,budget_name from Budget"
+            "SELECT budget_pk,budget_name FROM Budget"
         )
         return self.cursor.fetchall()
     def close(self):

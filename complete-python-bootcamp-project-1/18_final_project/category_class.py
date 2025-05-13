@@ -22,7 +22,7 @@ class Category():
         :rtype: list[tuple]
         """
         self.cursor.execute(
-            "SELECT * from categories"
+            "SELECT * FROM categories"
         )
         return self.cursor.fetchall()
 
@@ -35,8 +35,9 @@ class Category():
         :rtype: str
         """        
         self.cursor.execute(
-            """Select category_name from Categories
-                Where category_pk = ?
+            """
+            SELECT category_name FROM Categories
+            WHERE category_pk = ?
             """,
             (cat_id,)
         )

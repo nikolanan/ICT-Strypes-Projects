@@ -7,7 +7,7 @@ class Occurrence:
     def show_occurences(self) -> tuple:
         """Fetch all occurrences from the database."""
         self.cursor.execute(
-            "SELECT * from Occurrences"
+            "SELECT * FROM Occurrences"
         )
         return self.cursor.fetchall()
     def show_occurence_by_id(self,occ_pk: int) -> str:
@@ -19,8 +19,9 @@ class Occurrence:
         :rtype: str
         """        
         self.cursor.execute(
-            """Select rarity from Occurrences
-            where occ_pk = ?
+            """
+            SELECT rarity FROM Occurrences
+            WHERE occ_pk = ?
             """,
             (occ_pk,)
         )
