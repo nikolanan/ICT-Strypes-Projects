@@ -1,6 +1,6 @@
 SELECT DISTINCT 
-        (M.firstname || ' ' ||  M.surname) as member, 
-		F.name as facility
+        (M.firstname || ' ' ||  M.surname) AS member, 
+		F.name AS facility
 FROM cd.members AS M
 JOIN cd.bookings AS B
 ON M.memid = B.memid
